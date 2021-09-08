@@ -94,33 +94,26 @@ columns=fullflexible
 \let\StandardTheFigure\thefigure
 \let\vec\mathbf
 
-
 \title{
 EE5600 Assignment 1
 }
 \author{ Perabhattula Venkatesh\\AI20MTECH01004}	
-
-
-
 
 \maketitle
 
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
 
-
 \begin{abstract}
 This document contains the solution to a Area of triangle problem.
 \end{abstract}
 %
-Download all python codes from 
+Download all python and latex codes from 
 %
 \begin{lstlisting}
 https://github.com/venky-p/EE5600/Assignment_1
 \end{lstlisting}
-
 %
-
 \section{Problem}
 \begin{lstlisting}
 Problem Set: Vector2, Example II, Problem 5
@@ -129,13 +122,10 @@ Problem Set: Vector2, Example II, Problem 5
 \begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
 \numberwithin{equation}{enumi}
 
-
-
 \item Find the area of the triangle formed by the points (a, c+a), (a, c) and (-a, c-a)
 
 \section{Solution}
 We are going to solve this problem using vectors
-
 
 \begin{align}
 \vec{P} = \myvec{a\\c+a}, \vec{Q} =\myvec{a\\c},
@@ -158,7 +148,7 @@ Rewriting P, Q and R as product of a matrix and a vector
 \end{align}
 
 \begin{align}
-Area\:of\:given\:\triangle le\:=\:\frac{1}{2}\norm{\Vec{P-Q}\times  \Vec{P-R}}
+\text{Area of given Triangle }=\frac{1}{2}\norm{\Vec{P-Q}\times  \Vec{P-R}}
 \label{1}
 \end{align}
 
@@ -173,23 +163,33 @@ Area\:of\:given\:\triangle le\:=\:\frac{1}{2}\norm{\Vec{P-Q}\times  \Vec{P-R}}
 =\vec{Au}\times\vec{Bu}+\vec{Bu}\times\vec{Cu}+\vec{Cu}\times\vec{Au}
 \end{align}
 
-
 \begin{align}
 =\myvec{a\\c+a}\times\myvec{a\\c}+\myvec{a\\c}\times\myvec{-a\\c-a}+\myvec{-a\\c-a}\times\myvec{a\\c+a}
 \end{align}
 
 \begin{align}
-=ac-a(c+a)+a(c-a)-c(-a)\\+(-a)(c+a)-(c-a)a
+=\myvec{0\\0\\-a^2}+\myvec{0\\0\\-a^2}+\myvec{0\\0\\0}
 \end{align}
 
 \begin{align}
-=-2a^2
+=\myvec{0\\0\\-2a^2}
+\label{5}
 \end{align}
 
-By Substituting the above value in \eqref{1}, We get
+By Substituting \eqref{5} in \eqref{1}, We get
 
 \begin{align}
-Area\:of\:given\:\triangle le\:=\:\frac{1}{2}\norm{-2a^2}
+\text{Area of given Triangle }=\frac{1}{2}\begin{Vmatrix}
+0\\0\\-2a^2
+\end{Vmatrix}
+\end{align}
+
+\begin{align}
+= \frac{1}{2}\sqrt{0^2 + 0^2+ (-2a^2)^2}   
+\end{align}
+
+\begin{align}
+= \frac{1}{2} 2a^2   
 \end{align}
 
 \begin{align}
@@ -197,7 +197,7 @@ Area\:of\:given\:\triangle le\:=\:\frac{1}{2}\norm{-2a^2}
 \end{align}
 
 \begin{align}
-\boxed{\therefore Area\:of\:given\:\triangle le\:=\:a^2 units^2}
+\boxed{\therefore \text{Area of given Triangle }=a^2 units^2}
 \label{4}
 \end{align}
 
@@ -220,14 +220,10 @@ By substituting the given values in \eqref{3}, We get
 	\label{Fig:3.1}
 \end{figure}
 
-
 Using \eqref{4},
 \begin{align}
-Area\:of\:\triangle le\:=\:a^2\\=2^2\\=\:4\:units^2
+\text{Area of given Triangle }=a^2\\=2^2\\=4 units^2
 \end{align}
-
-
-
 
 \end{enumerate}
 
