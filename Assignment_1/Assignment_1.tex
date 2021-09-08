@@ -122,33 +122,32 @@ Problem Set: Vector2, Example II, Problem 5
 \begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
 \numberwithin{equation}{enumi}
 
-\item Find the area of the triangle formed by the points (a, c+a), (a, c) and (-a, c-a)
+\item Find the area of the triangle formed by the points $ \vec{P} \myvec{a\\c+a}$, $\vec{Q} \myvec{a\\c}$ and $\vec{R} \myvec{-a\\c-a}$
 
 \section{Solution}
 We are going to solve this problem using vectors
 
 \begin{align}
-\vec{P} = \myvec{a\\c+a}, \vec{Q} =\myvec{a\\c},
-\vec{R} =\myvec{-a\\c-a}
+\vec{P}=\myvec{a\\c+a},&\vec{Q} =\myvec{a\\c},&\vec{R} =\myvec{-a\\c-a}
 \label{3}
 \end{align}
 
 Rewriting P, Q and R as product of a matrix and a vector
 
 \begin{align}
-\vec{P}=\vec{Au}=\myvec{1&0\\1&1}\myvec{a\\c}
+\vec{P}=\vec{Au}=\myvec{1&0\\1&1}\myvec{a\\c}&&
 \end{align}
 
 \begin{align}
-\vec{Q}=\vec{Bu}=\myvec{1&0\\0&1}\myvec{a\\c}
+\vec{Q}=\vec{Bu}=\myvec{1&0\\0&1}&\myvec{a\\c}&
 \end{align}
 
 \begin{align}
-\vec{R}=\vec{Cu}=\myvec{-1&0\\-1&1}\myvec{a\\c}
+\vec{R}=\vec{Cu}=\myvec{-1&0\\-1&1}&\myvec{a\\c}&
 \end{align}
 
 \begin{align}
-\text{Area of given Triangle }=\frac{1}{2}\norm{\Vec{P-Q}\times  \Vec{P-R}}
+\text{Area of given $\triangle$le }=\frac{1}{2}\norm{\Vec{P-Q}\times\Vec{P-R}}
 \label{1}
 \end{align}
 
@@ -156,48 +155,41 @@ Rewriting P, Q and R as product of a matrix and a vector
 \Vec{P-Q}\times  \Vec{P-R} = \vec{(Au-Bu)\times(Au-Cu)}
 \end{align}
 
-\begin{align}
-=\vec{Au}\times\vec{Au}-\vec{Au}\times\vec{Cu}-\vec{Bu}\times\vec{Au}\\+\vec{Bu}\times\vec{Cu}
-\end{align}
-\begin{align}
-=\vec{Au}\times\vec{Bu}+\vec{Bu}\times\vec{Cu}+\vec{Cu}\times\vec{Au}
-\end{align}
+\begin{multline}
+\Vec{P-Q}\times  \Vec{P-R}=\vec{Au}\times\vec{Au}-\vec{Au}\times\vec{Cu}\\
+-\vec{Bu}\times\vec{Au}+\vec{Bu}\times\vec{Cu}
+\end{multline}
+
+\begin{multline}
+\Vec{P-Q}\times\Vec{P-R}=\vec{Au}\times\vec{Bu}+\vec{Bu}\times\vec{Cu}\\+\vec{Cu}\times\vec{Au}
+\end{multline}
+
+\begin{multline}
+\Vec{P-Q}\times \Vec{P-R}=\myvec{a\\c+a}\times\myvec{a\\c}+\myvec{a\\c}\times\myvec{-a\\c-a}\\+\myvec{-a\\c-a}\times\myvec{a\\c+a}
+\end{multline}
+
+\begin{multline}
+\Vec{P-Q}\times  \Vec{P-R}=\myvec{0\\0\\-a^2}+\myvec{0\\0\\-a^2}+\myvec{0\\0\\0}
+\end{multline}
 
 \begin{align}
-=\myvec{a\\c+a}\times\myvec{a\\c}+\myvec{a\\c}\times\myvec{-a\\c-a}+\myvec{-a\\c-a}\times\myvec{a\\c+a}
-\end{align}
-
-\begin{align}
-=\myvec{0\\0\\-a^2}+\myvec{0\\0\\-a^2}+\myvec{0\\0\\0}
-\end{align}
-
-\begin{align}
-=\myvec{0\\0\\-2a^2}
+\Vec{P-Q}\times  \Vec{P-R}=\myvec{0\\0\\-2a^2}
 \label{5}
 \end{align}
 
 By Substituting \eqref{5} in \eqref{1}, We get
 
 \begin{align}
-\text{Area of given Triangle }=\frac{1}{2}\begin{Vmatrix}
+\text{Area of given $\triangle$le }&=\frac{1}{2}\begin{Vmatrix}
 0\\0\\-2a^2
-\end{Vmatrix}
+\end{Vmatrix}\\
+&= \frac{1}{2}\sqrt{0^2 + 0^2+ (-2a^2)^2}\\
+&= \frac{1}{2} 2a^2\\
+&=a^2
 \end{align}
 
 \begin{align}
-= \frac{1}{2}\sqrt{0^2 + 0^2+ (-2a^2)^2}   
-\end{align}
-
-\begin{align}
-= \frac{1}{2} 2a^2   
-\end{align}
-
-\begin{align}
-=a^2
-\end{align}
-
-\begin{align}
-\boxed{\therefore \text{Area of given Triangle }=a^2 units^2}
+\boxed{\therefore \text{Area of given $\triangle$le }=a^2 units^2}
 \label{4}
 \end{align}
 
@@ -222,11 +214,11 @@ By substituting the given values in \eqref{3}, We get
 
 Using \eqref{4},
 \begin{align}
-\text{Area of given Triangle }=a^2\\=2^2\\=4 units^2
+\text{Area of given $\triangle$le }&=a^2\\
+&=2^2\\
+&=4 units^2
 \end{align}
 
 \end{enumerate}
 
 \end{document}
-
-
