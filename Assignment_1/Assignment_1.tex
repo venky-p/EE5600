@@ -135,16 +135,11 @@ We are going to solve this problem using vectors
 Rewriting P, Q and R as product of a matrix and a vector
 
 \begin{align}
-\vec{P}=\vec{Au}=\myvec{1&0\\1&1}\myvec{a\\c}&&
+\vec{P}=\vec{Au}&=\myvec{1&0\\1&1}\myvec{a\\c}\\
+\vec{R}=\vec{Cu}&=\myvec{-1&0\\-1&1}\myvec{a\\c}\\
+\vec{Q}=\vec{Bu}&=\myvec{1&0\\0&1}\myvec{a\\c}
 \end{align}
 
-\begin{align}
-\vec{Q}=\vec{Bu}=\myvec{1&0\\0&1}&\myvec{a\\c}&
-\end{align}
-
-\begin{align}
-\vec{R}=\vec{Cu}=\myvec{-1&0\\-1&1}&\myvec{a\\c}&
-\end{align}
 
 \begin{multline}
 \text{Area of given $\triangle$le }=\frac{1}{2}\norm{\Vec{P-Q}\times\Vec{P-R}}
@@ -161,21 +156,15 @@ Rewriting P, Q and R as product of a matrix and a vector
 \end{multline}
 
 \begin{multline}
-\Vec{P-Q}\times\Vec{P-R}=\vec{Au}\times\vec{Bu}+\vec{Bu}\times\vec{Cu}\\+\vec{Cu}\times\vec{Au}
+\Vec{P-Q}\times\Vec{P-R}=\vec{Au}\times\vec{Bu}+\vec{Bu}\times\vec{Cu}\\+\vec{Cu}\times\vec{Au}\\
+\Vec{P-Q}\times\Vec{P-R}=\myvec{a\\c+a}\times\myvec{a\\c}+\myvec{a\\c}\times\myvec{-a\\c-a}\\+\myvec{-a\\c-a}\times\myvec{a\\c+a}\\
+\Vec{P-Q}\times\Vec{P-R}=\myvec{0\\0\\-a^2}+\myvec{0\\0\\-a^2}+\myvec{0\\0\\0}
 \end{multline}
 
-\begin{multline}
-\Vec{P-Q}\times \Vec{P-R}=\myvec{a\\c+a}\times\myvec{a\\c}+\myvec{a\\c}\times\myvec{-a\\c-a}\\+\myvec{-a\\c-a}\times\myvec{a\\c+a}
-\end{multline}
-
-\begin{multline}
-\Vec{P-Q}\times  \Vec{P-R}=\myvec{0\\0\\-a^2}+\myvec{0\\0\\-a^2}+\myvec{0\\0\\0}
-\end{multline}
-
-\begin{multline}
-\Vec{P-Q}\times  \Vec{P-R}=\myvec{0\\0\\-2a^2}
+\begin{align}
+\Vec{P-Q}\times\Vec{P-R}=\myvec{0\\0\\-2a^2}
 \label{5}
-\end{multline}
+\end{align}
 
 By Substituting \eqref{5} in \eqref{1}, We get
 
